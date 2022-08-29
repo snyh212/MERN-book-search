@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
+// Require apollo-server, schemas, and auths
 
+// start apollo server and middleware
 const app = express();
 const PORT = process.env.PORT || 3001;
 
