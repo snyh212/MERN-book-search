@@ -1,20 +1,22 @@
 {
-  "name": "mern-book-search",
+  "name": "googlebooks-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/snyh212/MERN-book-search.git"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/snyh212/MERN-book-search/issues"
+  "devDependencies": {
+    "concurrently": "^5.1.0"
   },
-  "homepage": "https://github.com/snyh212/MERN-book-search#readme"
+  "dependencies": {
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0"
+  }
 }
